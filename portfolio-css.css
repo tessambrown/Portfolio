@@ -1,8 +1,8 @@
 /* css/styles.css */
 :root {
     --color-pink-light: #ffecf0;
-    --color-pink: #ff69b4;
-    --color-burgundy: #800020;
+    --color-pink: #EB9BBD;
+    --color-cherry: #AF1F24;
     --max-width: 1200px;
     --spacing-small: 1rem;
     --spacing-medium: 2rem;
@@ -33,15 +33,12 @@ body {
     align-items: center;
 }
 
-.logo {
-    font-size: 1.5rem;
-    color: var(--color-pink);
-}
-
-.logo span {
-    color: var(--color-burgundy);
-    font-style: italic;
-    font-family: serif;
+.logo img{
+    position: absolute;
+    width: 289px;
+    height: 105px;
+    top: 0;
+    left: 21px;
 }
 
 .nav-links {
@@ -94,24 +91,8 @@ body {
 }
 
 /* Home Page */
-.creative-cart {
-    background-color: var(--color-pink-light);
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    margin-bottom: var(--spacing-medium);
-}
-
-.cart-title {
-    color: var(--color-burgundy);
-    font-style: italic;
-    font-family: serif;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.cart-subtitle {
-    color: var(--color-pink);
-    font-weight: bold;
+.creative-cart img{
+    
 }
 
 /* Work Grid */
