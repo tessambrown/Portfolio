@@ -19,28 +19,80 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
+    height: 80px;
+    padding: 0 40px;
+    background-color: #FDF8F8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 .logo {
-    font-size: 2.5rem;
-    color: #e6a5c3;
+    display: block;
+    height: 75px; /* Adjust based on your logo's dimensions */
 }
 
-.logo span {
-    color: #8b4513;
-    font-style: italic;
+.logo img {
+    height: 100%;
+    width: auto;
 }
 
-nav a {
+nav {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-link {
     color: #333;
     text-decoration: none;
-    margin-left: 20px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 5px 0;
+    position: relative;
 }
 
-nav a:hover {
-    color: #e6a5c3;
+/* Navigation link hover effect */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #AF1F24;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+/* Active page indicator */
+.nav-link.active {
+    color: #AF1F24;
+}
+
+.nav-link.active::after {
+    transform: scaleX(1);
+}
+
+/* Add margin to main content to account for fixed header */
+main {
+    margin-top: 80px;
+}
+
+/* Work Archive link specific color */
+a[href="work.html"] {
+    color: #AF1F24;
+}
+
+/* About link specific color */
+a[href="about.html"] {
+    color: #AF1F24;
 }
 
 /* Hero section */
