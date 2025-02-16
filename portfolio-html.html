@@ -3,93 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tessa Brown - Portfolio</title>
-    <link rel="stylesheet" href="portfolio-css.css">
+    <title>Tessa Brown Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="nav">
-        <div class="nav-container">
-            <div class="logo">
-                <img src="assets/Name Logo.png" alt="logo">
-            </div>
-                <div class="nav-links">
-                    <a href="#" class="nav-link active">HOME</a>
-                    <a href="#" class="nav-link">WORK ARCHIVE</a>
-                    <a href="#" class="nav-link">CONTACT</a>
-                    <a href="#" class="nav-link">ABOUT ME</a>
-                </div>
-            </div>
+    <header>
+        <div class="logo">TESSA<span>Brown</span></div>
+        <nav>
+            <a href="#work">WORK ARCHIVE</a>
+            <a href="#about">ABOUT</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="boarding-pass">
+            <h2>MY PORTFOLIO NOW</h2>
+            <p>POTENTIAL COLLABORATOR</p>
+            <p>AN ATLAS STUDENT</p>
         </div>
-    </nav>
-    <main class="main">
-        <!-- Home Page -->
-        <div class="page active" id="home">
+    </section>
 
-            <!-- first container contains the creative cart image and my small blurb -->
-            <div class="first-container">
-                <div class="creative-cart">
-                    <img src="assets/Creative Cart.png" alt="Creative tools illustration">
-                </div>
-            </div>
-
-            <!-- second conatiner includes the highlighted works image -->
-            <div class="second-container">
-                <div class="highlighted_work">
-                    <img src="assets/Highlited Work Title.png" alt="Highlighted Work Title">
-                </div>
-            </div>
-
-            <!-- third container includes the grid for highlighted work -->
-            <div class="third-container">
-                <div class="work-grid">
-                    <div class="work-item">
-                        <img src="assets/4davidheads.png" alt="TEDx Project 1">
-                    </div>
-                    <div class="work-item">
-                        <img src="assets/flowerX.png" alt="TEDx Project 2">
-                    </div>
-                    <div class="work-item">
-                        <img src="assets/Mock-up poster 1.png" alt="TEDx Project 3">
-                    </div>
-                </div>
-            </div>
+    <section id="work" class="portfolio-grid">
+        <div class="portfolio-item">
+            <img src="tedx-popup.jpg" alt="TEDxCU Pop Art Style">
         </div>
-
-        <!-- Work Archive Page -->
-        <div class="page" id="work">
-            <h1 class="page-title">WORK<span>Archive</span></h1>
-            <div class="work-grid">
-                <!-- Add your work items here -->
-            </div>
+        <div class="portfolio-item">
+            <img src="renaissance.jpg" alt="Renaissance 2024">
         </div>
-
-        <!-- Contact Page -->
-        <div class="page" id="contact">
-            <h1 class="page-title">GET IN<span>Touch</span></h1>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-label">LinkedIn:</div>
-                    <div class="contact-label">Email:</div>
-                    <div class="contact-label">Phone:</div>
-                </div>
-                <div class="contact-image">
-                    <img src="#" alt="Retro phone illustration">
-                </div>
-            </div>
+        <div class="portfolio-item">
+            <img src="floral-x.jpg" alt="Floral X Design">
         </div>
+        <!-- Add more portfolio items as needed -->
+    </section>
 
-        <!-- About Page -->
-        <div class="page" id="about">
-            <h1 class="page-title">ABOUT<span>Me</span></h1>
-            <div class="about-container">
-                <div class="profile-image">
-                    <img src="#" alt="Profile">
-                </div>
-                <p>Creative professional specializing in design and visual communications.</p>
-            </div>
+    <section id="about" class="about">
+        <p>I am a junior at the University of Colorado Boulder, working toward a B.S. in Creative Technology and Design, which is an interdisciplinary degree program in the College of Engineering and Applied Science. Through this program, I am developing diverse technological and design skills across multiple disciplines. This has allowed me to create a portfolio of unique projects that demonstrate my creative and technical abilities.</p>
+    </section>
+
+    <footer>
+        <div class="contact-info">
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="mailto:Tessa.Brown-1@colorado.edu">Tessa.Brown-1@colorado.edu</a>
         </div>
-    </main>
-
-    <script src="portfolio-javascript.js"></script>
+    </footer>
 </body>
 </html>
