@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+/* font instructions for the body text -> text in the overlays */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -21,7 +22,6 @@ header {
     align-items: center;
     height: 80px;
     padding: 0 40px;
-    background-color: #FDF8F8;
     position: fixed;
     top: 0;
     left: 0;
@@ -29,26 +29,44 @@ header {
     z-index: 1000;
 }
 
-.logo {
+/* Logo link styles */
+.logo-link {
     display: block;
-    height: 75px; /* Adjust based on your logo's dimensions */
+    height: 75px;
+    width: 232.1px;
+    transition: opacity 0.3s ease;
 }
 
-.logo img {
-    height: 100%;
-    width: auto;
+.logo-link:hover {
+    opacity: 0.8;
 }
+
+/* Logo image styles */
+.logo {
+    height: 75px;
+    width: auto;
+    display: block;
+}   
 
 nav {
     display: flex;
     gap: 40px;
 }
 
+.navbar {
+    display: flex;
+    align-items: center; /* Ensures vertical centering */
+}
+
 .nav-link {
-    color: #333;
+    font-family: "Helvetica", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+    color: #AF1F24;
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
     text-transform: uppercase;
     padding: 5px 0;
     position: relative;
@@ -95,17 +113,19 @@ a[href="about.html"] {
     color: #AF1F24;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 /* Hero section */
 .hero {
     margin-bottom: 40px;
 }
 
 .boarding-pass {
-    background-color: #f8f8f8;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height: 388px;
+    width: auto;
+    display: block;
 }
 
 /* Portfolio grid */
