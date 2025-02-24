@@ -7,21 +7,22 @@
 
 /* font instructions for the body text -> text in the overlays */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: "Helvetica", Arial, sans-serif;
+    /* line-height: 1.6; */
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    /* padding-bottom: 24px; */
+    background-color: #FAF9F6;
 }
 
 /* Header styles */
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 80px;
-    padding: 0 40px;
+    align-items: flex-start; /* Aligns logo to top */
+    height: 90px;
+
     position: fixed;
     top: 0;
     left: 0;
@@ -29,12 +30,17 @@ header {
     z-index: 1000;
 }
 
+/* padding for about and work archive links */
+.links {
+    padding: 20px 40px;
+    
+}
+
 /* Logo link styles */
 .logo-link {
     display: block;
-    height: 75px;
-    width: 232.1px;
     transition: opacity 0.3s ease;
+    padding-left: 10px;
 }
 
 .logo-link:hover {
@@ -43,9 +49,11 @@ header {
 
 /* Logo image styles */
 .logo {
-    height: 75px;
-    width: auto;
-    display: block;
+    height: auto;
+    width: 12rem;
+    align-items: center;
+    display: flex;
+    transform: translateY(-50px);
 }   
 
 nav {
@@ -117,34 +125,204 @@ a[href="about.html"] {
     box-sizing: border-box;
 }
 
-/* Hero section */
-.hero {
-    margin-bottom: 40px;
+.hero-container {
+    position: relative; /* Reference point for absolute positioning */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto; /* Centers the container */
+}
+
+
+.home-logo {
+    position: absolute;
+    width: 50.5625rem;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 .boarding-pass {
-    height: 388px;
-    width: auto;
+    width: 49.4375rem;
+    height: auto;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(80px);
+    z-index: 2;
 }
 
-/* Portfolio grid */
+.highlighted-work-title{
+    width: 16.25rem;
+    height: auto;
+    float: left;
+    transform: translateY(-20px);
+}
+
+
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    margin-bottom: 40px;
+    grid-template-columns: repeat(3, 29.0625rem);; /* Each item takes 465px width */
+    gap: 2rem; /* Space between items */
+    justify-content: center; /* Centers the grid */
+    /* margin-bottom: 40px; */
+    column-gap: 2rem; /* Horizontal spacing */
+    transform: translateY(204px);
+    position: relative;
 }
 
 .portfolio-item {
-    background-color: #f8f8f8;
+    width: 29.0625rem;
+    height: 39.625rem;
+    background-color: white; /* Background for the container */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensures no content spills out */
+    position: relative;
 }
 
-.portfolio-item img {
-    width: 100%;
+/* Varying width images inside fixed containers */
+.project-img {
+    height: auto; /* Maintain aspect ratio */
+    max-height: 100%; /* Ensures image fits inside */
+    max-width: 100%; /* Allows varying widths */
+}
+
+/* style for the 4 david heads image from home page */
+.davidheads {
+    width: 25.3125rem;
     height: auto;
+    flex-shrink: 0; 
+}
+
+/* style for the birth of venus poster */
+.poster-1 {
+    width: 23.0625rem;
+    height: 35.6875rem;
+    flex-shrink: 0; 
+}
+
+.flower-x {
+    width: 26.5rem;
+    height: 26.3125rem;
+    flex-shrink: 0; 
+}
+
+/* Hover overlay styles (hidden by default) */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* 30% black overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    align-items: flex-end; /* Moves text to the bottom */
+    padding-bottom: 20px; /* Adds spacing from the bottom */
+}
+
+/* Text inside the overlay */
+.overlay-text {
+    color: white;
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+    font-size: 60px;
+    /* font-weight: bold; */
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover state: Show overlay and text */
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+.portfolio-item:hover .overlay-text {
+    opacity: 1;
+}
+
+/* styles for the work archive page */
+.anamoly-logo {
+    width: 27.46781rem;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.poster-2 {
+    width: 23.25rem;
+    height: 35.9375rem;
+    flex-shrink: 0;
+}
+
+.david-head {
+    width: 25.3125rem;
+    height: 35.92144rem;
+    flex-shrink: 0;
+}
+
+.logo-2025 {
+    width: 25.18013rem;
+    height: 34.9375rem;
+    flex-shrink: 0;
+}
+
+.spray-paint {
+    width: 26.75rem;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.sweatshirt {
+    width: 27.0625rem;
+    height: 33.97588rem;
+    flex-shrink: 0;
+}
+
+.street-sign {
+    width: 25.9375rem;
+    height: 25.9375rem;
+    flex-shrink: 0;
+}
+
+.threeD-x {
+    width: 27.55481rem;
+    height: 32.16694rem;
+    flex-shrink: 0;
+}
+
+/* styles for only the booklet */
+.portfolio-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 29.0625rem);; /* Each item takes 465px width */
+    gap: 2rem; /* Space between items */
+    justify-content: center; /* Centers the grid */
+    margin-bottom: 40px;
+    column-gap: 2rem; /* Horizontal spacing */
+    transform: translateY(204px);
+}
+
+.portfolio-item-2 {
+    width: 29.0625rem;
+    height: 39.625rem;
+    background-color: white; /* Background for the container */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensures no content spills out */
+    position: relative;
 }
 
 /* About section */
@@ -154,21 +332,284 @@ a[href="about.html"] {
     line-height: 1.8;
 }
 
-/* Footer */
-footer {
-    background-color: #e6a5c3;
-    padding: 20px;
+/* Full-screen overlay */
+.full-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); /* 85% opacity */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
     text-align: center;
-    margin-top: 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1000;
+    overflow-y: auto; /* allows for scrolling in the full overlay */ 
 }
 
+/* Visible state */
+.full-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Overlay container: Holds both sides */
+.overlay-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    box-sizing: border-box; /* Ensures padding doesn't affect size */
+    overflow-y: auto; /* Enables scrolling if text is too long */
+}
+
+/* Left side: Image */
+.overlay-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#overlay-title, #overlay-text {
+    text-align: left;
+}
+
+/* title for the full overlay */
+h2 {
+    font-family: "Helvetica", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 100px;
+    color: white;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+/* body text for the full overlay */
+p {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 30px;
+    color: white;
+    padding: 80px;
+}
+
+/* 4 david heads overlay image style*/
+.sticker-img {
+    width: 38rem;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    padding: 24px;
+    flex-shrink: 0;
+}
+
+/* poster 1 overlay image style*/
+.poster-img {
+    width: 37.625rem;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    padding: 24px;
+    transform: translateY(60px);
+    flex-shrink: 0;  
+}
+
+/* flower sticker/logo overlay image style*/
+.logo-img {
+    width: 42.9375rem;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    padding: 24px;
+    flex-shrink: 0;
+}
+
+
+
+/* Illustrated anomaly logo overlay image style */
+.anomaly_logo-img{
+    width: 47.875rem;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    padding: 24px;
+    flex-shrink: 0;
+}
+
+/*  single david head overlay image style */
+.david-img {
+    width: 38rem;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    padding: 24px;
+    flex-shrink: 0;
+}
+
+/* multiple itterations of anomaly logos overlay image style */
+.anamolylogos-img {
+    width: 20.375rem;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    padding: 24px;
+    flex-shrink: 0;
+}
+
+/* spray paint logo overlay image style */
+.modern-img {
+    width: 32.3125rem;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    padding: 24px;
+    flex-shrink: 0;
+}
+
+/* crewneck overlay image style */
+.crewneck-img {
+    width: 47.6875rem;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    padding: 24px;
+    flex-shrink: 0;
+}
+
+/* 3D X overlay image style */
+.threeD-img {
+    width: 50.4375rem;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    padding: 24px;
+    flex-shrink: 0;
+}
+
+.btu-img {
+    width: 50rem;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    padding: 24px;
+    flex-shrink: 0;
+}
+
+/* Text container */
+.overlay-text-container {
+    max-width: 80%;
+    padding-top: 20px;
+}
+
+
+/* Close button (X icon) */
+.close-btn {
+    position: absolute;
+    top: 10px; /* Moves it inside */
+    right: 10px; /* Moves it inside */
+    width: 3.0625rem;
+    height: 2.75rem;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+
+
+/* About Container */
+.about-container {
+    display: flex; /* Arrange image and text side by side */
+    flex-direction: row; /* Ensure horizontal layout */
+    align-items: center; /* Align content vertically */
+    justify-content: center; /* Center content in container */
+    padding: 24px;
+    width: 100%;
+    max-width: 90rem; /* Ensures content doesn’t stretch too much */
+    margin: 40px auto;
+    gap: 24px; /* Space between image and text */
+}
+
+/* Profile Section */
+.profile-section {
+    flex: 0 0 30%; /* Takes 30% of the available width */
+    display: flex;
+    justify-content: flex-start; /* Align image to the left */
+}
+
+.profile-image {
+    width: 100%; /* Makes sure the image scales */
+    max-width: 24rem; /* Keeps the image from getting too large */
+    height: auto;
+}
+
+/* Bio Section */
+.bio-section {
+    flex: 1; /* Takes remaining space */
+    text-align: left;
+    max-width: 65rem;
+    max-width: 100%; /* Allows it to take more space */
+    margin: 0 24px; /* Adds a consistent margin around */
+}
+
+h3 {
+    color: #000;
+    font-family: "Times New Roman", serif;
+    font-size: 28 px;
+    line-height: 1.6;
+    margin-bottom: 38px; /* Ensures 38px spacing between paragraphs */
+}
+
+/* Footer sticks to the bottom */
+footer {
+    width: 100%;
+    height: 80px;
+    left: 0;
+    bottom: 0;
+    background-color: #e6a5c3;
+    /* padding: 20px; */
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Prevents overlap issues */
+    margin-bottom: 0;
+}
+
+/* Footer content layout */
 .contact-info {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
+/* Footer links */
 .contact-info a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }

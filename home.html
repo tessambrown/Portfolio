@@ -5,26 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tessa Brown Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo-link" aria-label="Home">
+        <!-- removed the image going to appear on other pages -->
+        <!-- <a href="index.html" class="logo-link" aria-label="Home">
             <img src="assets/name-logo.png" alt="Tessa Brown Logo" class="logo">
-        </a>
-        <nav>
+        </a> -->
+        <nav class="links">
             <a href="work_archive.html" class="nav-link">WORK ARCHIVE</a>
             <a href="about.html" class="nav-link">ABOUT</a>
         </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero-container">
+        <img src="assets/name-logo.png" class="home-logo" alt="Home Logo">
         <div class="boarding-pass">
-            <img src = "assets/two-boarding-passes.png" alt="Boarding Pass">
+            <img src = "assets/two-boarding-passes.png" class="boarding-pass" alt="Boarding Pass">
         </div>
     </section>
 
-    <section id="about" class="about">
-        <p>I am a junior at the University of Colorado Boulder, working toward a B.S. in Creative Technology and Design, which is an interdisciplinary degree program in the College of Engineering and Applied Science. Through this program, I am developing diverse technological and design skills across multiple disciplines. This has allowed me to create a portfolio of unique projects that demonstrate my creative and technical abilities.</p>
+    <!-- <div>
+        <img src="assets/Highlighted Work Tag.png" class="highlighted-work-title" alt="Highlighted Work Title">
+    </div> -->
+
+    <section class="portfolio-grid">
+         <!-- The onclick="openOverlay('image-path', 'text-label')" passes the image and text dynamically. -->
+        <div class="portfolio-item" onclick="openOverlay('pieces/4davidheads.png', '2024 Sticker')">
+            <img src="pieces/4davidheads.png" class="davidheads" alt="David Stickers">
+                
+            <div class="overlay">
+                <p class="overlay-text">2024 Sticker</p>
+            </div>
+        </div>
+        <div class="portfolio-item" onclick="openOverlay('pieces/Mock-up poster 1.png', '2024 Poster')">
+            <img src="pieces/Mock-up poster 1.png" class="poster-1" alt="Poster 1">
+            <div class="overlay">
+                <p class="overlay-text">2024 Poster 1</p>
+            </div>
+        </div>
+        <div class="portfolio-item" onclick="openOverlay('pieces/flowerX.png', '2024 Sticker/Logo')">
+            <img src="pieces/flowerX.png" class="flower-x" alt="Flower X Logo">
+            <div class="overlay">
+                <p class="overlay-text">2024 Sticker/Logo</p>
+            </div>
+        </div>
     </section>
 
     <footer>
@@ -33,5 +60,26 @@
             <a href="mailto:Tessa.Brown-1@colorado.edu">Tessa.Brown-1@colorado.edu</a>
         </div>
     </footer>
+
+    <!-- Full-screen overlay (hidden by default) -->
+    <div id="full-overlay" class="full-overlay">
+        <div class="overlay-container">
+            <!-- Close button -->
+            <img src="assets/close-icon.png" class="close-btn" onclick="closeOverlay()" alt="Close">
+            
+            <!-- Left side: Large Image -->
+            <div class="overlay-left">
+                <img id="overlay-image" src="" alt="Overlay Image">
+            </div>
+
+            <!-- Right side: Title and Description -->
+            <div class="overlay-right">
+                <h2 id="overlay-title"></h2>
+                <p id="overlay-text"></p>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 </html>

@@ -5,51 +5,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work Archive - Tessa Brown</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <a href="index.html" class="logo-link" aria-label="Home">
             <img src="assets/name-logo.png" alt="Tessa Brown Logo" class="logo">
         </a>
-        <nav>
+        <nav class="links">
             <a href="work_archive.html" class="nav-link">WORK ARCHIVE</a>
             <a href="about.html" class="nav-link">ABOUT</a>
         </nav>
     </header>
 
     <section class="work-archive">
-        <h1>Work Archive</h1>
         <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <img src="tedx-popup.jpg" alt="TEDxCU Pop Art Style">
-                <div class="item-description">
-                    <h3>TEDxCU Pop Art</h3>
-                    <p>2024</p>
+
+            <!-- Illustrated anamoly logo -->
+            <div class="portfolio-item" onclick="openOverlay('pieces/ted 24 holding x.png', '2025 Logo')">
+                <img src="pieces/ted 24 holding x.png" class="anamoly-logo" alt="Illustrated anamoly logo">
+                <div class="overlay">
+                    <p class="overlay-text">2025 Logo</p>
                 </div>
             </div>
-            <div class="portfolio-item">
-                <img src="renaissance.jpg" alt="Renaissance 2024">
-                <div class="item-description">
-                    <h3>Renaissance Event</h3>
-                    <p>2024</p>
+
+            <!-- Pop art david heads -->
+            <div class="portfolio-item" onclick="openOverlay('pieces/4davidheads.png', '2024 Sticker')">
+                <img src="pieces/4davidheads.png" class="davidheads" alt="David Stickers">
+                <div class="overlay">
+                    <p class="overlay-text">2024 Sticker</p>
                 </div>
             </div>
-            <div class="portfolio-item">
-                <img src="floral-x.jpg" alt="Floral X Design">
-                <div class="item-description">
-                    <h3>Floral X Design</h3>
-                    <p>2024</p>
+
+            <div class="portfolio-item" onclick="openOverlay('pieces/flowerX.png', '2024 Sticker/Logo')">
+                <img src="pieces/flowerX.png" class="flower-x" alt="Flower X Logo">
+                <div class="overlay">
+                    <p class="overlay-text">2024 Sticker/Logo</p>
                 </div>
             </div>
-            <div class="portfolio-item">
-                <img src="stars.jpg" alt="Stars Design">
-                <div class="item-description">
-                    <h3>Stars Typography</h3>
-                    <p>2024</p>
+
+            <div class="portfolio-item" onclick="openOverlay('pieces/Mock-up poster 2.png', '2024 Poster 2')">
+                <img src="pieces/Mock-up poster 2.png" class="poster-2"="Poster 2">
+                <div class="overlay">
+                    <p class="overlay-text">2024 Poster 2</p>
                 </div>
             </div>
+
+            <div class="portfolio-item" onclick="openOverlay('pieces/Mock-up poster 1.png', '2024 Poster 1')">
+                <img src="pieces/Mock-up poster 1.png" class="poster-1" alt="Poster 1">
+                <div class="overlay">
+                    <p class="overlay-text">2024 Poster 1</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" onclick="openOverlay('pieces/onehead copy.png', '2024 David Sticker')">
+                <img src="pieces/onehead copy.png" class="david-head" alt="David Head Sticker">
+                <div class="overlay">
+                    <p class="overlay-text">2024 David Sticker</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" onclick="openOverlay('pieces/TED logos part 2-18.png', '2025 Logos')">
+                <img src="pieces/TED logos part 2-18.png" class="logo-2025" alt="2025 Logo">
+                <div class="overlay">
+                    <p class="overlay-text">2025 Logos</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" onclick="openOverlay('pieces/TEDx_DavidLogo.png', '2024 Modern Logo')">
+                <img src="pieces/TEDx_DavidLogo.png" class="spray-paint" alt="2024 Logo">
+                <div class="overlay">
+                    <p class="overlay-text">2024 Modern Logo</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" onclick="openOverlay('pieces/2024red6.png', '2024 Crewneck')">
+                <img src="pieces/2024red6.png" class="sweatshirt" alt="2024 Sweatshirt">
+                <div class="overlay">
+                    <p class="overlay-text">2024 Crewneck</p>
+                </div>
+            </div>
+
+            <!-- typographic booklet -> change it to a different size -->
+            <div class="portfolio-item >
+                <img src="pieces/tedx anomaly logo-14.png" class="booklet" alt="2025 3Dx Logo">
+                <div class="overlay">
+                    <p class="overlay-text">Expressive Typographic Booklet</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" onclick="openOverlay('pieces/tedx anomaly logo-14.png', '2025 3D Logo')">
+                <img src="pieces/tedx anomaly logo-14.png" class="threeD-x" alt="2025 3Dx Logo">
+                <div class="overlay">
+                    <p class="overlay-text">2025 3D Logo</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" onclick="openOverlay('pieces/street sgin.png', 'BTU Sticker')">
+                <img src="pieces/street sgin.png" class="street-sign" alt="Street Sign">
+                <div class="overlay">
+                    <p class="overlay-text">BTU Sticker</p>
+                </div>
+            </div>
+            
         </div>
     </section>
+
+    <!-- Full-screen overlay (hidden by default) -->
+    <div id="full-overlay" class="full-overlay">
+        <div class="overlay-container">
+            <!-- Close button -->
+            <img src="assets/close-icon.png" class="close-btn" onclick="closeOverlay()" alt="Close">
+            
+            <!-- Left side: Large Image -->
+            <div class="overlay-left">
+                <img id="overlay-image" src="" alt="Overlay Image">
+            </div>
+
+            <!-- Right side: Title and Description -->
+            <div class="overlay-right">
+                <h2 id="overlay-title"></h2>
+                <p id="overlay-text"></p>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="contact-info">
