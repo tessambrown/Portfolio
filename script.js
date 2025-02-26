@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // poster "birth of venus"
             } else if (overlayTitle === "2024 Poster 1") {
-                title = "TEDxCU 2024 Event Poster 2";
+                title = "TEDxCU 2024 Event Poster 1";
                 description = "This poster is one iteration created to communicate essential details for the TEDxCU 2024 event, such as the venue, ticket website, and campus sponsors. Inspired by the 'Renaissance' theme, the design deconstructs the word as it might appear in a dictionary, highlighting its varied meanings. The background showcases Botticelli's The Birth of Venus, celebrating this famous piece of ";
                 overlayClass = "poster-overlay"; 
                 imageClass = "poster-img"; 

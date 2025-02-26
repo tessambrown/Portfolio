@@ -9,9 +9,8 @@
 body {
     font-family: "Helvetica", Arial, sans-serif;
     /* line-height: 1.6; */
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    /* padding: 20px; */
     /* padding-bottom: 24px; */
     background-color: #FAF9F6;
 }
@@ -23,7 +22,7 @@ header {
     align-items: flex-start; /* Aligns logo to top */
     height: 90px;
 
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
@@ -33,28 +32,7 @@ header {
 /* padding for about and work archive links */
 .links {
     padding: 20px 40px;
-    
 }
-
-/* Logo link styles */
-.logo-link {
-    display: block;
-    transition: opacity 0.3s ease;
-    padding-left: 10px;
-}
-
-.logo-link:hover {
-    opacity: 0.8;
-}
-
-/* Logo image styles */
-.logo {
-    height: auto;
-    width: 12rem;
-    align-items: center;
-    display: flex;
-    transform: translateY(-50px);
-}   
 
 nav {
     display: flex;
@@ -106,6 +84,27 @@ nav {
     transform: scaleX(1);
 }
 
+/* Logo link styles */
+.logo-link {
+    display: block;
+    transition: opacity 0.3s ease;
+    padding-left: 10px;
+}
+
+.logo-link:hover {
+    opacity: 0.8;
+}
+
+/* Logo image styles */
+.logo {
+    height: auto;
+    width: 12rem;
+    align-items: center;
+    display: flex;
+    transform: translateY(-50px);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));
+}   
+
 /* Add margin to main content to account for fixed header */
 main {
     margin-top: 80px;
@@ -142,7 +141,7 @@ a[href="about.html"] {
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    
+    transform: translateY(-120px);
 }
 
 .boarding-pass {
@@ -151,26 +150,40 @@ a[href="about.html"] {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    transform: translateY(80px);
+    transform: translateY(20px);
     z-index: 2;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 
 .highlighted-work-title{
     width: 16.25rem;
     height: auto;
-    float: left;
-    transform: translateY(-20px);
+    padding: 24px;
+    transform: translateY(-80px);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 
+/* grid for home page */
+.portfolio-grid-home {
+    display: grid;
+    grid-template-columns: repeat(3, 29.0625rem);; /* Each item takes 465px width */
+    gap: 2rem; /* Space between items */
+    justify-content: center; /* Centers the grid */
+    margin-bottom: 40px;
+    column-gap: 2rem; /* Horizontal spacing */
+    transform: translateY(-80px);
+    position: relative;
+}
 
+/* grid for work archive */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(3, 29.0625rem);; /* Each item takes 465px width */
     gap: 2rem; /* Space between items */
     justify-content: center; /* Centers the grid */
-    /* margin-bottom: 40px; */
+    margin-bottom: 40px;
     column-gap: 2rem; /* Horizontal spacing */
-    transform: translateY(204px);
+    /* transform: translateY(-80px); */
     position: relative;
 }
 
@@ -223,7 +236,6 @@ a[href="about.html"] {
     height: 100%;
     background: rgba(0, 0, 0, 0.3); /* 30% black overlay */
     display: flex;
-    align-items: center;
     justify-content: center;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
@@ -548,6 +560,7 @@ p {
     align-items: center; /* Align content vertically */
     justify-content: center; /* Center content in container */
     padding: 24px;
+    padding-top: 50px;
     width: 100%;
     max-width: 90rem; /* Ensures content doesn’t stretch too much */
     margin: 40px auto;
@@ -565,6 +578,7 @@ p {
     width: 100%; /* Makes sure the image scales */
     max-width: 24rem; /* Keeps the image from getting too large */
     height: auto;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* Bio Section */
@@ -573,43 +587,81 @@ p {
     text-align: left;
     max-width: 65rem;
     max-width: 100%; /* Allows it to take more space */
-    margin: 0 24px; /* Adds a consistent margin around */
+    margin: 24px; 
 }
 
-h3 {
+.bio-text {
     color: #000;
     font-family: "Times New Roman", serif;
     font-size: 28 px;
     line-height: 1.6;
-    margin-bottom: 38px; /* Ensures 38px spacing between paragraphs */
+    font-weight: normal; 
 }
 
 /* Footer sticks to the bottom */
-footer {
-    width: 100%;
-    height: 80px;
-    left: 0;
-    bottom: 0;
+.footer {
+    height: 195px;
     background-color: #e6a5c3;
-    /* padding: 20px; */
-    text-align: left;
+    display: flex;
+    /* text-align: left; */
+    align-items: center;
+    position: relative; 
+    /* margin-top: 100px; */
+    padding: 20px;
+    /* transform: translateY(200px); */
+}
+
+.content {
+    width: 100%;
+    max-width: 1500px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative; /* Prevents overlap issues */
-    margin-bottom: 0;
+    justify-content: flex-end;
+    position: relative;
 }
 
-/* Footer content layout */
 .contact-info {
+    position: relative;
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px; /* Ensures spacing between elements */
+    padding-right: 16px;
+}
+
+.contact-img {
+    width: 8.125rem;
+    height: auto;
+    /* have the drop shadow below the transparent image */
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.linkedin{
+    align-self: flex-end; /* Align LinkedIn icon to the right */
+    margin-bottom: 5px; /* Space between LinkedIn icon and email */
+}
+
+.linkedin-img {
+    width: 5rem;
+    height: auto; 
+}
+
+.linkedin-img:hover {
+    transform: scale(1.05); /* Slightly increase size */
+}
+
+.email-link {
     justify-content: center;
     gap: 20px;
+    white-space: nowrap; /* Ensures the email stays in one line */
 }
 
-/* Footer links */
-.contact-info a {
-    color: white;
+.email-link a {
+    color: #AF1F24;
     text-decoration: none;
     font-weight: bold;
+}
+
+.email-link:hover {
+    transform: scale(1.05); /* Slightly increase size */
 }

@@ -11,9 +11,9 @@
 <body>
     <header>
         <!-- removed the image going to appear on other pages -->
-        <!-- <a href="index.html" class="logo-link" aria-label="Home">
-            <img src="assets/name-logo.png" alt="Tessa Brown Logo" class="logo">
-        </a> -->
+        <a href="index.html" class="logo-link" aria-label="Home">
+            <!-- <img src="assets/name-logo.png" alt="Tessa Brown Logo" class="logo"> -->
+        </a>
         <nav class="links">
             <a href="work_archive.html" class="nav-link">WORK ARCHIVE</a>
             <a href="about.html" class="nav-link">ABOUT</a>
@@ -27,11 +27,11 @@
         </div>
     </section>
 
-    <!-- <div>
+    <div>
         <img src="assets/Highlighted Work Tag.png" class="highlighted-work-title" alt="Highlighted Work Title">
-    </div> -->
+    </div>
 
-    <section class="portfolio-grid">
+    <section class="portfolio-grid-home">
          <!-- The onclick="openOverlay('image-path', 'text-label')" passes the image and text dynamically. -->
         <div class="portfolio-item" onclick="openOverlay('pieces/4davidheads.png', '2024 Sticker')">
             <img src="pieces/4davidheads.png" class="davidheads" alt="David Stickers">
@@ -54,13 +54,6 @@
         </div>
     </section>
 
-    <footer>
-        <div class="contact-info">
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-            <a href="mailto:Tessa.Brown-1@colorado.edu">Tessa.Brown-1@colorado.edu</a>
-        </div>
-    </footer>
-
     <!-- Full-screen overlay (hidden by default) -->
     <div id="full-overlay" class="full-overlay">
         <div class="overlay-container">
@@ -80,6 +73,25 @@
         </div>
     </div>
 
+    <footer class="footer">
+
+        <!-- image placed in the bottom right -->
+         <div class="content">
+
+            <div class=contact-info>
+                <div class="linkedin">
+                    <img src ="assets/Linkedin Logo.png" alt="linkedin" class="linkedin-img">
+                </div>
+    
+                <div class="email-link">
+                    <a href="mailto:Tessa.Brown-1@colorado.edu" class="email">Tessa.Brown-1@colorado.edu</a>
+                </div>
+            </div>
+            <img src="assets/contact tag.png" alt="Get In Touch" class="contact-img">
+            
+        </div>
+        
+    </footer>
+    </html>
 
 </body>
-</html>
