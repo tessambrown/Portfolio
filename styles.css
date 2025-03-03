@@ -559,33 +559,36 @@ p {
     flex-direction: row; /* Ensure horizontal layout */
     align-items: center; /* Align content vertically */
     justify-content: center; /* Center content in container */
-    padding: 24px;
+    /* padding: 24px; */
+    padding-left: 10px;
+    padding-right: 24px;
     padding-top: 50px;
+    padding-bottom: 24px;
     width: 100%;
     max-width: 90rem; /* Ensures content doesn’t stretch too much */
     margin: 40px auto;
-    gap: 24px; /* Space between image and text */
+    gap: 10px; 
 }
 
 /* Profile Section */
 .profile-section {
-    flex: 0 0 30%; /* Takes 30% of the available width */
+    flex: 0 0 40%; /* Takes 30% of the available width */
     display: flex;
     justify-content: flex-start; /* Align image to the left */
 }
 
 .profile-image {
-    width: 100%; /* Makes sure the image scales */
-    max-width: 24rem; /* Keeps the image from getting too large */
+    width: 100%; 
+    max-width: 50rem; 
     height: auto;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 /* Bio Section */
 .bio-section {
     flex: 1; /* Takes remaining space */
     text-align: left;
-    max-width: 65rem;
+    max-width: 60rem;
     max-width: 100%; /* Allows it to take more space */
     margin: 24px; 
 }
@@ -593,7 +596,7 @@ p {
 .bio-text {
     color: #000;
     font-family: "Times New Roman", serif;
-    font-size: 28 px;
+    /* font-size: 28px; */
     line-height: 1.6;
     font-weight: normal; 
 }
