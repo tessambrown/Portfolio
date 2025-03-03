@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // poster "birth of venus"
             } else if (overlayTitle === "2024 Poster 1") {
                 title = "TEDxCU 2024 Event Poster 1";
-                description = "This poster is one iteration created to communicate essential details for the TEDxCU 2024 event, such as the venue, ticket website, and campus sponsors. Inspired by the 'Renaissance' theme, the design deconstructs the word as it might appear in a dictionary, highlighting its varied meanings. The background showcases Botticelli's The Birth of Venus, celebrating this famous piece of ";
+                description = "This poster is one iteration created to communicate essential details for the TEDxCU 2024 event, such as the venue, ticket website, and campus sponsors. Inspired by the 'Renaissance' theme, the design deconstructs the word as it might appear in a dictionary, highlighting its varied meanings. The background showcases Botticelli's The Birth of Venus, celebrating this famous piece of art";
                 overlayClass = "poster-overlay"; 
                 imageClass = "poster-img"; 
                 textClass = "poster-text"; 
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // spray paint x logo
             } else if(overlayTitle === "2024 Modern Logo") {
                 title = "Spray Paint TEDx 2024 Logo";
-                description = "I I designed these two pieces for TEDxCU 2024, drawing inspiration from the theme of ‘Renaissance’. Using simplified vector illustrations, I reimagined iconic Renaissance imagery, including the Statue of David and The Creation of Adam. I incorporated a bold spray-paint X as a backdrop for both illustrations to infuse a contemporary twist.";
+                description = "I designed this piece for TEDxCU 2024, drawing inspiration from the theme of ‘Renaissance’. Using simplified vector illustrations, I reimagined iconic Renaissance imagery, including the Statue of David. I incorporated a bold spray-paint X as a backdrop for both illustrations to infuse a contemporary twist.";
                 overlayClass = "modern-overlay"; 
                 imageClass = "modern-img"; 
                 textClass = "modern-text";
@@ -134,4 +134,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.querySelector(".close-btn").addEventListener("click", closeOverlay);
+
+    //button for opening a new tab for my linked in profile
+    document.addEventListener("DOMContentLoaded", function () {
+        const button = document.getElementById("imageButton");
+    
+        button.addEventListener("click", function () {
+            window.open("https://www.linkedin.com/in/tessa-marie-brown/", "_blank");
+        });
+    });
 });
