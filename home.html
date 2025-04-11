@@ -10,9 +10,7 @@
 </head>
 <body>
     <header>
-        <!-- removed the image going to appear on other pages -->
         <a href="index.html" class="logo-link" aria-label="Home">
-            <!-- <img src="assets/name-logo.png" alt="Tessa Brown Logo" class="logo"> -->
         </a>
         <nav class="links">
             <a href="work_archive.html" class="nav-link">WORK ARCHIVE</a>
@@ -32,21 +30,20 @@
     </div>
 
     <section class="portfolio-grid-home">
-         <!-- The onclick="openOverlay('image-path', 'text-label')" passes the image and text dynamically. -->
-        <div class="portfolio-item" onclick="openOverlay('pieces/4davidheads.png', '2024 Sticker')">
+        <div class="portfolio-item">
             <img src="pieces/4davidheads.png" class="davidheads" alt="David Stickers">
                 
             <div class="overlay">
                 <p class="overlay-text">2024 Sticker</p>
             </div>
         </div>
-        <div class="portfolio-item" onclick="openOverlay('pieces/Mock-up poster 1.png', '2024 Poster')">
+        <div class="portfolio-item">
             <img src="pieces/Mock-up poster 1.png" class="poster-1" alt="Poster 1">
             <div class="overlay">
                 <p class="overlay-text">2024 Poster 1</p>
             </div>
         </div>
-        <div class="portfolio-item" onclick="openOverlay('pieces/flowerX.png', '2024 Sticker/Logo')">
+        <div class="portfolio-item">
             <img src="pieces/flowerX.png" class="flower-x" alt="Flower X Logo">
             <div class="overlay">
                 <p class="overlay-text">2024 Sticker/Logo</p>
@@ -58,7 +55,7 @@
     <div id="full-overlay" class="full-overlay">
         <div class="overlay-container">
             <!-- Close button -->
-            <img src="assets/close-icon.png" class="close-btn" onclick="closeOverlay()" alt="Close">
+            <img src="assets/close-icon.png" class="close-btn" alt="Close">
             
             <!-- Left side: Large Image -->
             <div class="overlay-left">
